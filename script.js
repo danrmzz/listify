@@ -5,28 +5,32 @@ const taskList = document.getElementById("task-list");
 addTaskButton.addEventListener("click", function() {
     const task = taskInput.value; // get the task from input
 
-    const listItem = document.createElement("li"); // create a list item
+    if (task != "") {
 
-    listItem.textContent = task; // save the task in the list item
+        const listItem = document.createElement("li"); // create a list item
 
-    taskList.appendChild(listItem); // add the list item to the list
+        listItem.textContent = task; // save the task in the list item
 
-    const deleteButton = document.createElement("button"); // create a button
-    deleteButton.textContent = "🗑️"; // set "Delete" as the button text
-    deleteButton.classList.add("delete-button");
+        taskList.appendChild(listItem); // add the list item to the list
 
-    deleteButton.addEventListener("click", function() {
-        taskList.removeChild(listItem);
-        taskList.removeChild(deleteButton);
-    });
-
-    taskList.appendChild(deleteButton); // add the delete button to the list
-
-    taskInput.value = ""; // clear the input box
+        const deleteButton = document.createElement("button"); // create a button
+        deleteButton.textContent = "🗑️"; // set "Delete" as the button text
+        deleteButton.classList.add("delete-button");
+    
+        deleteButton.addEventListener("click", function() {
+            taskList.removeChild(listItem);
+            taskList.removeChild(deleteButton);
+        });
+    
+        taskList.appendChild(deleteButton); // add the delete button to the list
+    
+        taskInput.value = ""; // clear the input box
+    } else {
+        return
+    }
+ 
 });
 
-// Event listener for using enter button to input information and error handling
-// for empty tasks
 taskInput.addEventListener("keydown", function(event) {
     const task = taskInput.value;
 
@@ -35,6 +39,7 @@ taskInput.addEventListener("keydown", function(event) {
     }
 
 });
+
 
 
 
