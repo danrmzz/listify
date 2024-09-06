@@ -11,6 +11,17 @@ addTaskButton.addEventListener("click", function() {
 
     taskList.appendChild(listItem); // add the list item to the list
 
+    const deleteButton = document.createElement("button"); // create a button
+    deleteButton.textContent = "🗑️"; // set "Delete" as the button text
+    deleteButton.classList.add("delete-button");
+
+    deleteButton.addEventListener("click", function() {
+        taskList.removeChild(listItem);
+        taskList.removeChild(deleteButton);
+    });
+
+    taskList.appendChild(deleteButton); // add the delete button to the list
+
     taskInput.value = ""; // clear the input box
 });
 
@@ -23,4 +34,7 @@ taskInput.addEventListener("keydown", function(event) {
         addTaskButton.click();
     }
 
-})
+});
+
+
+
