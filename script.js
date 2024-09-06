@@ -2,7 +2,9 @@ const addTaskButton = document.getElementById("add-task");
 const taskInput = document.getElementById("new-task");
 const taskList = document.getElementById("task-list");
 
+
 addTaskButton.addEventListener("click", function() {
+    
     const task = taskInput.value; // get the task from input
 
     if (task != "") {
@@ -14,7 +16,6 @@ addTaskButton.addEventListener("click", function() {
         taskList.appendChild(listItem); // add the list item to the list
 
         const deleteButton = document.createElement("button"); // create a button
-        deleteButton.textContent = "🗑️"; // set "Delete" as the button text
         deleteButton.classList.add("delete-button");
     
         deleteButton.addEventListener("click", function() {
@@ -25,6 +26,8 @@ addTaskButton.addEventListener("click", function() {
         taskList.appendChild(deleteButton); // add the delete button to the list
     
         taskInput.value = ""; // clear the input box
+        taskInput.focus(); // set focus back to the input box
+        
     } else {
         return
     }
