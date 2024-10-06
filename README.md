@@ -1,4 +1,4 @@
-# ToDO List
+# ToDo List
 
 This is a simple and intuitive To-Do list application built using HTML, CSS, and JavaScript. This project allows users to create, manage, and delete tasks efficiently with a user-friendly interface.
 
