@@ -1,6 +1,6 @@
-# Listify
+# ToDO List
 
-**Listify** is a simple and intuitive To-Do list application built using HTML, CSS, and JavaScript. This project allows users to create, manage, and delete tasks efficiently with a user-friendly interface.
+This is a simple and intuitive To-Do list application built using HTML, CSS, and JavaScript. This project allows users to create, manage, and delete tasks efficiently with a user-friendly interface.
 
 ## Features
 
@@ -11,11 +11,11 @@
 
 ## Demo
 
-You can try the live version of Listify at the following link:
+You can try the live version of this program at the following link:
 
-[**Listify Live Demo**](https://simple-todo-list-one-delta.vercel.app/)
+[**Live Demo**](https://simple-todo-list-one-delta.vercel.app/)
 
-<img src="todo.jpg" alt="Listify Screenshot" width="400" />
+<img src="todo.jpg" alt="Screenshot" width="400" />
 
 
 ## How to Use
